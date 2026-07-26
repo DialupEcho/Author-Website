@@ -1,0 +1,287 @@
+/* Prevent sideways scrolling globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* RESET BODY MARGINS — REQUIRED FOR EDGE‑TO‑EDGE */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+  background-color: #93c47d;   /* green background */
+  color: black;                /* body text black */
+}
+
+/* BASE NAVBAR */
+.navbar {
+  position: fixed;             /* CHANGED: keeps header pinned when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;                 /* safe width */
+  z-index: 1000;               /* UPDATED: bumped up to ensure it sits above hero content */
+
+  background: #6aa84f;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 40px;
+  box-sizing: border-box;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+}
+
+/* Desktop nav */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+}
+
+/* MOBILE MODE */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 40px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    line-height: 1;
+    order: 1;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    flex-basis: 100%;
+    order: 2;
+    align-items: flex-end;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    text-align: right;
+    width: 100%;
+    line-height: 1;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+  }
+
+  /* HIDES SITE TITLE ON MOBILE SCREENS */
+  .site-title {
+    display: none;
+  }
+
+  .brand {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* DESKTOP MODE */
+@media (min-width: 901px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: flex !important;
+  }
+}
+
+/* HERO BANNER — IMAGE + CENTERED TEXT */
+.hero {
+  width: 100%;                 /* FIXED: was 100vw */
+  height: 480px;
+  margin: 0;
+
+  background-image: url('background.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+/* HERO TEXT — WHITE ONLY ON BANNER */
+.hero-title {
+  background: none;
+  padding: 0;
+
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+
+  font-family: Arial, sans-serif;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+
+/* MOBILE HERO */
+@media (max-width: 900px) {
+  .hero {
+    height: 300px;
+    padding-top: 90px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+  }
+}
+
+/* BODY WRAPPER — keeps text away from screen edges */
+.body-wrapper {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  text-align: justify;
+}
+
+/* FOOTER STYLES */
+footer.body-wrapper {
+  color: #767676;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+footer.body-wrapper a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+footer.body-wrapper a:hover {
+  color: #004499;
+}
+
+/* Image styles */
+.profile-img {
+  float: left;
+  width: 500px;
+  max-width: 35%;
+  height: auto;
+  margin: 0 15px 10px 0;
+}
+
+.regular-img {
+  float: left;
+  width: 500px;
+  max-width: 30%;
+  height: auto;
+  margin: 0 15px 10px 0;
+}
+
+/* Clearfix */
+.body-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Full-width button */
+.full-width-btn {
+  display: block;
+  width: 100%;                /* FIXED: was 100vw */
+  max-width: 100%;            /* prevents overflow */
+
+  background-color: #013220;
+  color: #ffffff;
+
+  border: none;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.full-width-btn:hover {
+  background-color: #0b4c34;
+}
+
+/* Dark green button to match the Google Site */
+.full-width-btn,
+button {
+  display: inline-block;
+  background-color: #274e13;   /* Updated to match Google Sites background */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;         /* Gives it that slight rounded Google Sites edge */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.full-width-btn:hover,
+button:hover {
+  background-color: #4c8a2c;   /* Slightly darker shade for hover effect */
+}

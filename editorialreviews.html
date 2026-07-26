@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>John Westley Turnbull</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-80CDJLXS9E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-80CDJLXS9E');
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xrvodonpx1");
+  </script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1 class="site-title">John Westley Turnbull</h1>
+    </div>
+
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="editorialreviews.html"><b>Editorial Reviews</b></a>
+      <a href="contactme.html">Contact me</a>
+      <a href="privacypolicy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-title">
+      <p>
+        Editorial Reviews
+      </p>
+    </div>
+  </section>
+
+  <main class="body-wrapper"> 
+    <h2>The Samuel Paradox</h2><br>
+      <h3>Reedsy Discovery</h3>
+	    <p>"The Samuel Paradox by John Turnbull is a serious story that begins in a light-hearted vein. It centers on a humanoid robot named Samuel, acquired by a small family to serve as a home assistant."</p><br>
+	    <p>"The book has an expressive cover that conveys its contents well. The story is action-packed, fast-paced, and riveting. It prepares you to decide whether acquiring a home robot is truly wise."</p><br>
+	    <a href="https://reedsy.com/discovery/book/the-samuel-paradox-john-turnbull#review" target="_blank">
+        <button type="button">Read the full review at Reedsy Discovery</button></a><br><br><br>
+      <h3>Long and Short Reviews</h3>
+	    <p>"The foreshadowing was perfectly written. It was subtle in the beginning and gradually strengthened as Arthur and his family grew accustomed to Samuel’s presence in their lives and began to notice a few peculiar things about their first domestic robot."</p><br>
+		<p>"Some of the most memorable scenes in my opinion were the ones that explored the many differences between how an AI-powered domestic robot and a person would interpret the same set of circumstances."</p><br>
+		<p>"The Samuel Paradox was thought provoking."</p><br>
+		<a href="https://www.longandshortreviews.com/book-reviews/the-samuel-paradox-by-john-westley-turnbull/" target="_blank">
+        <button type="button">Read the full review at Long and Short Reviews</button></a><br><br><br><hr>
+	<h2>A Symbol of Time</h2><br>
+	  <h3>Literary Titan</h3>
+	    <p>“A Symbol of Time is a sweeping work of science fiction that follows a dying species as it flees its collapsing Homeworld and sets course for the ‘Third World,’ a dangerous and vibrant planet filled with prehistoric monsters, hostile climates, and uncertain hope.”</p><br>
+	    <p>“The story blends large-scale worldbuilding with interpersonal tension, letting us watch society shrink down and then stretch again under pressure.”</p><br>
+	    <p>“If you’re drawn to stories about second chances and the uncomfortable truths that come with them, A Symbol of Time is one you’ll want to pick up.”</p><br>
+	    <a href="https://literarytitan.com/2026/01/23/a-symbol-of-time/" target="_blank">
+        <button type="button">Read the full review at Literary Titan</button></a><br><br><br>
+	  <h3>Likely Story</h3>
+	    <p>“A Symbol of Time opens on a world that is already dying, and it takes its time letting that grief settle. The first chapters linger on dust, loss, and memory—not in a rushed, apocalyptic way, but in a quieter, heavier one.”</p><br>
+		<p>"Once the journey begins, the novel shifts into a story about pressure. Life aboard the ark is tense, contained, and deeply human. The ship becomes its own fragile world, where fear spreads faster than facts and leadership is tested not by grand speeches, but by restraint."</p><br>
+		<a href="https://likelystory.blog/2026/01/29/review-a-symbol-of-time-by-john-westley-turnbull/?like_actor=821192885&like_hmac&postid=10374&like=1&source=sub_email" target="_blank">
+        <button type="button">Read the full review at Likely Story</button></a><br><br><br>
+	  <h3>Long and Short Reviews</h3>
+	    <p>"The world building was thorough and kept my interest levels high. I especially enjoyed gradually discovering the many physiological and psychological differences between this species and our own."</p><br>
+		<p>"There were multiple times when plot twists caught me by surprise. It was a great deal of fun to be surprised so often, especially given how many different types of twists and turns were shared with the audience."</p><br>
+		<a href="https://www.longandshortreviews.com/?s=A+Symbol+of+Time" target="_blank">
+        <button type="button">Read the full review at Long and Short Reviews</button></a><br><br><br>
+  </main>
+  
+  <footer class="body-wrapper">
+      <p>&copy; [2025] John Westley Turnbull | <a href="https://www.johnwestleyturnbull.au">www.johnwestleyturnbull.au</a></p>
+      <p>Web design by Ethan Jones</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.textContent = nav.classList.contains('open') ? '✖' : '☰';
+    });
+
+    // Reset cleanly when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        nav.classList.remove('open');
+        hamburger.textContent = '☰';
+      }
+    });
+  </script>
+</body>
+</html>

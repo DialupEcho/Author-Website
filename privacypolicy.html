@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>John Westley Turnbull</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-80CDJLXS9E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-80CDJLXS9E');
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xrvodonpx1");
+  </script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1 class="site-title">John Westley Turnbull</h1>
+    </div>
+
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="editorialreviews.html">Editorial Reviews</a>
+      <a href="contactme.html">Contact me</a>
+      <a href="privacypolicy.html"><b>Privacy Policy</b></a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-title">
+      <p>
+        Privacy Policy
+      </p>
+    </div>
+  </section>
+
+  <main class="body-wrapper"> 
+  <h2>Privacy Policy</h2> 
+  <h3>Last Updated: 26/07/2026</h3>
+  <p>Welcome to the official website of John Westley Turnbull. Your privacy is important to us. This policy explains how we handle information on this site.</p><br>
+  <h3>1. Information We Collect</h3>
+  <p>We use Google Analytics and Microsoft Clarity to understand how visitors interact with our site (e.g., which pages are most popular and what country visitors are from). This data is anonymous and does not identify you personally.</p><br>
+  <h3>2. Cookies</h3>
+  <p>This site uses cookies through Google and Microsoft to provide its services and analyse traffic. You can control or reset your cookies through your web browser settings at any time.</p><br>
+  <h3>3. External Links (Amazon)</h3>
+  <p>As an author, this site contains links to Amazon and other retailers where my books are available for purchase. Please note that once you click these links, you are subject to the privacy policy and terms of service of the relevant retailer.</p><br>
+  <h3>4. Contact Information</h3>
+  <p>If you choose to contact us via email or the form, we will only use your information to respond to your inquiry. We will never sell or share your personal details with third parties.</p>
+  </main>
+
+  <footer class="body-wrapper">
+      <p>&copy; [2025] John Westley Turnbull | <a href="https://www.johnwestleyturnbull.au">www.johnwestleyturnbull.au</a></p>
+      <p>Web design by Ethan Jones</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      hamburger.textContent = nav.classList.contains('open') ? '✖' : '☰';
+    });
+
+    // Reset cleanly when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        nav.classList.remove('open');
+        hamburger.textContent = '☰';
+      }
+    });
+  </script>
+</body>
+</html>
