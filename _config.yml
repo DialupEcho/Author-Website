@@ -1,2 +1,6 @@
+title: "John Westley Turnbull"
+url: "https://www.johnwestleyturnbull.au"
+baseurl: ""
+
 plugins:
   - jekyll-sitemap
