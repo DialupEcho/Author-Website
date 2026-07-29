@@ -7,7 +7,6 @@
   <title>John Westley Turnbull | Author & Science Fiction Writer</title>
   <link rel="canonical" href="https://www.johnwestleyturnbull.au/contactme.html" />
   <link rel="icon" href="logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-80CDJLXS9E"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,15 +26,15 @@
   .form-embed {
     width: 100%;
     max-width: 800px;
-    height: 1250px; /* Desktop height */
+    height: 1250px;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
+    border: none;
   }
 
-  /* INCREASE mobile height so the whole stacked form fits */
   @media (max-width: 900px) {
     .form-embed {
-      height: 1600px; /* Bumping this up gives Google Forms space to expand */
+      height: 1600px;
     }
   }
   </style>
@@ -60,18 +59,20 @@
 
   <section class="hero">
     <div class="hero-title">
-      <p>
-        Contact Me
-      </p>
+      <p>Contact Me</p>
     </div>
   </section>
 
   <main class="body-wrapper"> 
-  <h2>Contact John Westley Turnbull</h2>
-  <h3>Email</h3>
-  <p><a href="mailto:turnbulljohn323@gmail.com">turnbulljohn323@gmail.com</a></p><br>
-  <h3>Contact Form</h3>
-  <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfk9pzDH7LiHbJfvndUY35GtX6pM3j3oYkZxVzG8NyAbQnipg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="section-block">
+      <h2>Contact John Westley Turnbull</h2>
+      
+      <h3>Email</h3>
+      <p><a href="mailto:turnbulljohn323@gmail.com">turnbulljohn323@gmail.com</a></p>
+      
+      <h3 style="margin-top: 30px;">Contact Form</h3>
+      <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfk9pzDH7LiHbJfvndUY35GtX6pM3j3oYkZxVzG8NyAbQnipg/viewform?embedded=true">Loading…</iframe>
+    </div>
   </main>
   
   <footer class="body-wrapper">
@@ -88,7 +89,6 @@
       hamburger.textContent = nav.classList.contains('open') ? '✖' : '☰';
     });
 
-    // Reset cleanly when resizing to desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) {
         nav.classList.remove('open');
