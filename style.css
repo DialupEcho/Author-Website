@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 /* Prevent sideways scrolling globally */
 html, body {
   overflow-x: hidden;
@@ -8,18 +10,18 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: Arial, sans-serif;
-  background-color: #93c47d;   /* green background */
-  color: black;                /* body text black */
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #93c47d;
+  color: black;
 }
 
 /* BASE NAVBAR */
 .navbar {
-  position: fixed;             /* keeps header pinned when scrolling */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;                 /* safe width */
-  z-index: 1000;               /* sits above hero content */
+  width: 100%;
+  z-index: 1000;
 
   background: #6aa84f;
   color: black;
@@ -73,7 +75,6 @@ body {
 
 /* MOBILE MODE */
 @media (max-width: 900px) {
-
   .navbar {
     flex-direction: row;
     align-items: center;
@@ -117,7 +118,6 @@ body {
     text-decoration: none;
   }
 
-  /* HIDES SITE TITLE ON MOBILE SCREENS */
   .site-title {
     display: none;
   }
@@ -128,7 +128,6 @@ body {
     align-items: center;
   }
 
-  /* Mobile floating image fix */
   .profile-img, .regular-img {
     float: none !important;
     display: block;
@@ -149,16 +148,11 @@ body {
   }
 }
 
-/* HERO BANNER — IMAGE + CENTERED TEXT */
+/* HERO BANNER */
 .hero {
   width: 100%;
   height: 480px;
   margin: 0;
-
-  background-image: url('background.jpeg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
@@ -166,12 +160,42 @@ body {
 
   padding-top: 80px;
   box-sizing: border-box;
+
+  /* Safari-safe Parallax Fix */
+  position: relative;
+  -webkit-clip-path: inset(0);
+  clip-path: inset(0);
 }
 
-/* HERO TEXT — WHITE ONLY ON BANNER */
+/* The pseudo-element acts as the fixed background. 
+  It won't glitch on mobile because it's tied to the viewport, 
+  and the clip-path above guarantees it won't bleed into other sections! 
+*/
+.hero::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('background.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform; /* Hardware acceleration to prevent mobile painting glitches */
+}
+
+/* HERO TEXT */
 .hero-title {
   background: none;
   padding: 0;
+  margin: 0;
 
   color: white;
   font-size: 3rem;
@@ -179,34 +203,47 @@ body {
   text-align: center;
   letter-spacing: 1px;
 
-  font-family: Arial, sans-serif;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+
+  /* Ensure text stays layered above the new ::before background layer */
+  position: relative; 
+  z-index: 1;
 }
 
 /* MOBILE HERO */
 @media (max-width: 900px) {
   .hero {
-    height: 300px;
-    padding-top: 90px;
+    height: 55vh;
+    min-height: 380px;
+    max-height: 520px;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
     letter-spacing: 0.5px;
     color: white;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.2;
+    overflow-wrap: break-word;
   }
 }
 
-/* BODY WRAPPER — keeps text away from screen edges */
+/* BODY WRAPPER */
 .body-wrapper {
   max-width: 1100px;
   margin: 20px auto 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
-
   text-align: justify;
 }
 
@@ -246,7 +283,7 @@ body {
   gap: 10px;
   width: 100%;
   margin-top: 15px;
-  clear: both; /* Prevents buttons from jumping next to floated images */
+  clear: both;
 }
 
 .btn-container a {
@@ -261,6 +298,7 @@ body {
   color: #ffffff;
   border: none;
   padding: 14px 20px;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -309,9 +347,9 @@ footer.body-wrapper a:hover {
 
 /* PROMINENT HORIZONTAL DIVIDER */
 hr.divider {
-  border: none;               /* Removes default browser border */
-  height: 3px;                /* Makes it bolder (adjust to 4px if you want it thicker) */
-  background-color: #274e13;  /* Matches your button dark green color */
-  margin: 50px 0;             /* Generous spacing top and bottom */
-  border-radius: 2px;         /* Softens the edges slightly */
+  border: none;
+  height: 3px;
+  background-color: #274e13;
+  margin: 50px 0;
+  border-radius: 2px;
 }
