@@ -11,8 +11,8 @@ body {
   padding: 0;
 
   font-family: 'Montserrat', Arial, sans-serif;
-  background-color: #93c47d;
-  color: black;
+  background-color: #18283f;
+  color: white;
 }
 
 /* BASE NAVBAR */
@@ -23,7 +23,7 @@ body {
   width: 100%;
   z-index: 1000;
 
-  background: #6aa84f;
+  background: #0f1e35;
   color: black;
 
   display: flex;
@@ -49,7 +49,7 @@ body {
   margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
 /* Desktop nav */
@@ -59,7 +59,7 @@ body {
 }
 
 .nav a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ body {
   background: none;
   border: none;
   font-size: 32px;
-  color: black;
+  color: white;
   cursor: pointer;
 }
 
@@ -88,7 +88,7 @@ body {
     font-size: 32px;
     background: none;
     border: none;
-    color: black;
+    color: white;
     cursor: pointer;
     line-height: 1;
     order: 1;
@@ -114,7 +114,7 @@ body {
     width: 100%;
     line-height: 1;
     padding: 0;
-    color: black;
+    color: white;
     text-decoration: none;
   }
 
@@ -181,7 +181,7 @@ body {
   
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('background.jpeg');
+    url('background.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -294,7 +294,7 @@ body {
 .btn-container button {
   width: 100%;
   display: block;
-  background-color: #274e13;
+  background-color: #425067;
   color: #ffffff;
   border: none;
   padding: 14px 20px;
@@ -309,7 +309,7 @@ body {
 }
 
 .btn-container button:hover {
-  background-color: #4c8a2c;
+  background-color: #737f90;
 }
 
 /* FOOTER STYLES */
@@ -349,7 +349,7 @@ footer.body-wrapper a:hover {
 hr.divider {
   border: none;
   height: 3px;
-  background-color: #274e13;
+  background-color: #c9ced3;
   margin: 50px 0;
   border-radius: 2px;
 }
